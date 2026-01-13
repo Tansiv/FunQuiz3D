@@ -5,106 +5,162 @@
   box-sizing: border-box;
 }
 
+/* Body */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
+  background: linear-gradient(135deg, #2c3e50, #34495e); /* Dark background */
+  font-family: 'Comic Sans MS', sans-serif;
+  color: #fff;
+  transition: background 0.5s ease-in-out;
 }
 
-#game-container {
+/* Dark Mode */
+body.dark-mode {
+  background: linear-gradient(135deg, #2c3e50, #34495e); /* Dark Mode background */
+}
+
+/* Login/SignUp Forms */
+#login-form, #signup-form {
   text-align: center;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 h1 {
-  color: #4CAF50;
-  font-size: 36px;
-  margin-bottom: 20px;
+  font-size: 3rem;
+  color: #fff;
+  font-family: 'Comic Sans MS', sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+/* Buttons */
 button {
   padding: 15px 30px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin-top: 10px;
-}
-
-button:hover {
-  background-color: #45a049;
-}
-
-.hidden {
-  display: none;
-}
-
-#question-card {
-  margin-top: 20px;
-  font-size: 18px;
-  transform-style: preserve-3d;
-  perspective: 1000px;
-  transition: transform 0.5s;
-}
-
-#question-card:hover {
-  transform: rotateY(15deg);
-}
-
-#score-container {
-  margin-top: 20px;
-  font-size: 20px;
-}
-
-.answer-btn {
-  width: 100%;
-  padding: 12px;
-  margin-top: 10px;
-  background-color: #2196F3;
-  border-radius: 5px;
-  color: white;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.answer-btn:hover {
-  background-color: #1976D2;
-}
-
-#timer-container {
-  margin-top: 20px;
-  font-size: 18px;
-}
-
-@keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateY(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-#question-card {
-  animation: slideIn 0.5s ease-out;
-}
-
-button {
+  font-size: 1.25rem;
+  margin: 10px;
+  border-radius: 10px;
   transition: transform 0.3s ease;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 button:hover {
   transform: scale(1.1);
 }
+
+/* Hidden Form */
+.hidden {
+  display: none;
+}
+
+/* Quiz Screen */
+#quiz-screen {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 50px;
+  border-radius: 20px;
+}
+
+.answer-btn {
+  padding: 15px;
+  background-color: #007bff;
+  color: white;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.answer-btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-5px);
+}
+
+/* Question Card */
+#question-card {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: scale(0.9);
+}
+
+#question-card:hover {
+  transform: scale(1);
+  transition: transform 0.3s ease;
+}
+
+/* Timer and Score */
+#score-container, #timer-container {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Animated Background */
+@keyframes gradientAnimation {
+  0% { background: linear-gradient(45deg, #ff7e5f, #feb47b); }
+  50% { background: linear-gradient(45deg, #6a11cb, #2575fc); }
+  100% { background: linear-gradient(45deg, #ff7e5f, #feb47b); }
+}
+
+body {
+  animation: gradientAnimation 10s ease infinite;
+}
+
+/* Pop-up Form Styling */
+#feedback-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  width: 400px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.trophy {
+  font-size: 3rem;
+  margin: 20px;
+}
+.close-btn {
+  padding: 10px 20px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.close-btn:hover {
+  background-color: #c0392b;
+}
+/* Responsive Design */
+@media (max-width: 600px) {     
+    #login-form, #signup-form, #quiz-screen {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+    }                   
+/* End of Style.css */
+
+
+
+
