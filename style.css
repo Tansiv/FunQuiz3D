@@ -1,0 +1,150 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+#game-container {
+  text-align: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #4CAF50;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 15px 30px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.hidden {
+  display: none;
+}
+
+#question-card {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+#score-container {
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.answer-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background-color: #2196F3;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.answer-btn:hover {
+  background-color: #1976D2;
+}
+.answer-btn.correct {
+  background-color: #4CAF50;
+}
+.answer-btn.incorrect {
+  background-color: #f44336;
+}
+.answer-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+#next-btn {
+  margin-top: 20px;
+  background-color: #ff9800;
+}
+#next-btn:hover {
+  background-color: #fb8c00;
+}
+#restart-btn {
+  margin-top: 20px;
+  background-color: #9c27b0;
+}
+#restart-btn:hover {
+  background-color: #7b1fa2;
+}
+#timer {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #ff5722;
+}
+#final-score {
+  font-size: 24px;
+  margin-top: 20px;
+  color: #333;
+}
+#high-scores {
+  margin-top: 20px;
+  text-align: left;
+}
+#high-scores h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+#high-scores ul {
+  list-style-type: none;
+}
+#high-scores li {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  width: calc(100% - 24px);
+  margin-top: 10px;
+}
+input[type="text"]:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+label {
+  font-size: 16px;
+  margin-top: 10px;
+  display: block;
+}
+#error-message {
+  color: #f44336;
+  margin-top: 10px;
+}
+#submit-score-btn {
+  margin-top: 10px;
+  background-color: #3f51b5;
+}

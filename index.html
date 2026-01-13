@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FunQuiz 3D</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="game-container">
+    <h1>Welcome to FunQuiz 3D!</h1>
+    <button id="start-btn">Start Quiz</button>
+    
+    <!-- Quiz container initially hidden -->
+    <div id="quiz-container" class="hidden">
+      <div id="question-card">
+        <p id="question-text"></p>
+        <button class="answer-btn">Answer 1</button>
+        <button class="answer-btn">Answer 2</button>
+        <button class="answer-btn">Answer 3</button>
+        <button class="answer-btn">Answer 4</button>
+      </div>
+      <div id="score-container">
+        <p>Score: <span id="score">0</span></p>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
